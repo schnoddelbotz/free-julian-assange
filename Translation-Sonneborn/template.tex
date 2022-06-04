@@ -1,0 +1,55 @@
+\documentclass[paper=a4, fontsize=11pt]{book}
+\usepackage[top=1.8cm, bottom=2.54cm, left=2.25cm, right=2.25cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % use includegraphics to import jpegs --- FIXME... see below
+\usepackage[british]{babel} % English language/hyphenation
+\usepackage{pdfcomment}
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\usepackage{color}
+\usepackage{parskip}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage[]{nohyperref}  % This makes hyperref commands do nothing without errors
+\usepackage{url}  % This makes \url work
+% http://tex.stackexchange.com/questions/667/typeset-url-in-a-non-typewriter-font
+\urlstyle{same}
+% allow manual caption/figure numbering
+% http://tex.stackexchange.com/questions/199207/no-caption-number-for-figures-and-tables
+\usepackage{caption}
+
+\hypersetup{hidelinks}
+
+
+\usepackage{fourier} % Use the Adobe N-Utopia font for the document - comment this line to return to the LaTeX default
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+% https://www.sharelatex.com/learn/Typesetting_quotations
+\usepackage{epigraph}
+% \epigraph{All human things are subject to decay, and when fate summons, Monarchs must obey}{\textit{Mac Flecknoe \\ John Dryden}}
+
+\title{Drucksache 1}
+
+\date{2. Auflage, aktualisiert. Jetzt noch deprimierender. Smiley!}
+
+% Mail/Link author?
+\author{Claudia Latour / Martin Sonneborn \\
+ \textbf{Assange}
+}
+
+% allow multi-line comments using \begin{comment} ... \end{comment}
+\usepackage{verbatim}
+
