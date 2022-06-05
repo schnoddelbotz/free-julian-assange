@@ -1,5 +1,12 @@
 \documentclass[paper=a4, fontsize=11pt, openany]{book}
 % https://stackoverflow.com/questions/491904/how-do-i-remove-blank-pages-coming-between-two-chapters-in-appendix
+
+% https://tex.stackexchange.com/questions/24066/start-new-chapter-on-same-page
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
 \usepackage[top=1.8cm, bottom=2.54cm, left=2.25cm, right=2.25cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} % use includegraphics to import jpegs --- FIXME... see below
@@ -12,6 +19,15 @@
 \usepackage{parskip}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \definecolor{assangered}{rgb}{0.6, 0.145, 0.196}
+\chapterfont{\color{assangered}}  % sets colour of chapters
+\sectionfont{\color{assangered}}
+
+
+% https://groups.google.com/g/comp.text.tex/c/mq_OLlvzmoU
+% assangered color for footnote TEXT itself
+\usepackage{footmisc}
+\def\footnotelayout{\color{assangered}}
+
 %\usepackage[]{nohyperref}  % This makes hyperref commands do nothing without errors
 \usepackage{url}  % This makes \url work
 % http://tex.stackexchange.com/questions/667/typeset-url-in-a-non-typewriter-font
@@ -25,6 +41,9 @@
 
 \usepackage{afterpage}
 % https://tex.stackexchange.com/questions/25137/how-to-change-the-background-color-only-for-the-current-page
+
+%% https://tex.stackexchange.com/questions/296545/overlapping-numbers-and-titles-in-toc
+\usepackage{tocloft}
 
 \usepackage{fourier} % Use the Adobe N-Utopia font for the document - comment this line to return to the LaTeX default
 
