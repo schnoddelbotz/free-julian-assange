@@ -1,0 +1,142 @@
+%-------------------------------------------------------------------------------
+\newcommand{\assignmentTitle}{ASSIGNMENT T*I*T*L*E*}
+\input{../templates/assignment.inc.tex}
+%\pagenumbering{gobble} % turn off page numbers
+%-------------------------------------------------------------------------------
+
+% For all Discussions (unless stated otherwise):
+% Create a single document with your initial post. Your document should be 350–500 words,
+% though you will be marked based on the quality of your writing, not on the number of words.
+
+% Individual assignments --- UNLESS STATED OTHERWISE:
+% Your document should have 750-1,000 words
+
+\paragraph{Introduction}
+  Is the introduction to a paper. One or two sentences.
+  - Make a claim; clearly lay out position
+  - establish paper's roadmap
+  The claim should be: specific, based on evidence, arguable.
+  Thesis Roadmap template: "I will argue [claim] becuase of [reason1], [reason2] and [reason3]."
+
+  The thesis statement or main claim must be debatable.
+  The thesis needs to be narrow
+
+  Claims of fact or definition
+  Claims of cause and effect
+  Claims about value
+  Claims about solutions or policies
+
+  Use \verb|\begin{outline}[enumerate]| to create an environment for an outline:
+
+\begin{outline}[enumerate]
+  \1 Introduction
+  \1 Background
+  \1 First major point
+    \2 subs if any
+  \1 Second and further points
+  \1 Opposing views
+    \2 ack em
+    \2 provide response
+  \1 Conclusion
+    \2 restate thesis
+    \2 recommended steps
+    \2 why important
+\end{outline}
+
+%%%% EXAMPLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Use Ctrl+Shift+Up/Dn for multicursor (disable sysprefs/kbd/shortcuts/mission-ctrl!)
+% Use Cmd-/ to uncomment
+% \paragraph{Image fun}
+% \LaTeX\ plays nicely with \texttt{JPG}s and \texttt{PNG}s nowadays. Look!
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=40mm]{example.jpg}
+% \caption{A simple caption \label{exampleLabel}}
+% \end{figure}
+% In any case, it's useful to reference to Figure \ref{exampleLabel} ...
+
+% two images side by side
+% \begin{figure}[H]
+% \centering
+% \begin{subfigure}{.5\textwidth}
+%   \centering
+%   \includegraphics[width=.9\linewidth]{2-tier.png}
+%   \caption{Two-tier architecture}
+%   \label{fig:sub1}
+% \end{subfigure}%
+% \begin{subfigure}{.5\textwidth}
+%   \centering
+%   \includegraphics[width=.9\linewidth]{3-tier.png}
+%   \caption{Three-tier architecture}
+%   \label{fig:sub2}
+% \end{subfigure}
+% \caption{A random product () on siroop.ch and its recommendations}
+% \label{fig:test}
+% \end{figure}
+
+\paragraph{Source code} can be set using using \verb|\begin{lstlisting}[language=bash]| ...
+  \begin{lstlisting}[language=bash]
+  FOO="bar baz"
+  echo ${FOO}
+  \end{lstlisting}
+  % Include source from file:
+  % \lstinputlisting{../FooBar.cpp}
+
+  or set using a default verbatim environment ...
+  \begin{verbatim}
+  FOO="bar baz"
+  echo ${FOO}
+  \end{verbatim}
+
+\paragraph{A subparagraph}
+  Foo bar baz ``bli bla blu'' blip bing bong, use \verb|\citep{...bibref...}| for citations
+  using parantheses like \citep{elearnSolutionIndividual}.
+  \textbf{Bold font} can be set using \verb|\textbf{...}|.
+  For in-text-citations, to name an author like \textcite{elearnSolutionIndividual},
+  use \verb|\textcite{...bibref...}|. Ever wanted to
+  write \texttt{rm -rf /}? Do it using \verb|\texttt{...}| for normal text
+  or using \verb!\verb|...|! for \LaTeX\ commands. Enforce line breaks
+  using double back slashes like here.
+  \\
+  Use \verb|\textcolor{colorname}{text...}|
+  to write for example in \textcolor{blue}{something} color.
+  \\
+  \textit{Italic Text}: Use \verb|\textit{...}|.
+  Good old \textsc{Kapitälchen} - what for? Emphasize using \verb|\emph{...}|: \emph{it is important}!
+  Does \citeauthor{elearnSolutionIndividual}'s quote inspire you? Use \verb|\citeauthor{...bibref...}|.
+  \texttt{citep} creates same as \texttt{parencite}: \citep{elearnSolutionIndividual}.
+
+\paragraph{Example of a list}
+  \begin{itemize}
+    \item First item in a list
+    \item Second item in a list
+  \end{itemize}
+
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+\begin{tabular}{ | l | l | l | p{5cm} |}
+  \hline
+  Day & Min Temp & Max Temp & Summary \\ \hline
+  Monday & 11C & 22C & A clear day with lots of sunshine.
+  However, the strong breeze will bring down the temperatures. \\ \hline
+  Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
+  across most of Scotland and Northern Ireland,
+  but rain reaching the far northwest. \\ \hline
+  Wednesday & 10C & 21C & Rain will still linger for the morning.
+  Conditions will improve by early afternoon and continue
+  throughout the evening. \\
+  \hline
+\end{tabular}
+
+%-------------------------------------------------------------------------------
+% Non-printing PDF-comments. Use:
+% \pdfcomment{I am a PDF comment box}
+%-------------------------------------------------------------------------------
+
+%%%% EXAMPLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%-------------------------------------------------------------------------------
+% this will print the bibliography and end the document
+\finishDocument
+

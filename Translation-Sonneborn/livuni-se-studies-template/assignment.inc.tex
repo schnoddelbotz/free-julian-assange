@@ -1,0 +1,519 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for personal Assigments
+% Featuring
+%  - Harvard style referencing
+%  - UTF-8 input encoding by default
+%  -
+% Intended to be included using the \input{} command.
+%
+% Based on:
+%  Short Sectioned Assignment
+%  http://www.LaTeXTemplates.com
+%  Original author:
+%  Frits Wenneker (http://www.howtotex.com)
+%  License:
+%  CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% ... and some hints, see URLs below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% plus
+% https://github.com/psy-q/uol-msc-latex-template/blob/master/dissertation.tex
+% PLUS
+% tons of tiny tweaks, based on hints found on tex.stackexchange.com and others
+% SEE BOTTOM OF THIS DOCUMENT FOR ALL HELPFUL LINKS THAT HELPED ME CREATING THIS.
+
+%----------------------------------------------------------------------------------------
+% DEFAULTS
+
+% todo!!! assign myurl cmd!
+% http://stackoverflow.com/questions/1012799/latex-prevent-line-break-in-a-span-of-text
+\def\myurl{\hfil\penalty 100 \hfilneg \hbox}
+
+% user including this template should
+% \newcommand{\assignmentTitle}{your...title...here}
+% before including it using \input{}
+\providecommand{\assignmentTitle}{DEFINE assignmentTitle!!}
+
+%----------------------------------------------------------------------------------------
+% BASIC PAGE SETUP
+
+% A4 paper and 11pt font size
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[top=1.8cm, bottom=2.54cm, left=2.25cm, right=2.25cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % use includegraphics to import jpegs --- FIXME... see below
+\usepackage[british]{babel} % English language/hyphenation
+\usepackage{pdfcomment}
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\usepackage{color}
+\usepackage{parskip} % http://tex.stackexchange.com/questions/40429/how-to-use-the-parskip-package-space-in-between-paragraphs
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{listingBgColor}{rgb}{1,1,1}
+\definecolor{UOLBlue}{rgb}{0,0.03,0.25}
+\definecolor{DarkBlue}{rgb}{0.05,0.05,0.35}
+\definecolor{DarkRed}{rgb}{0.45,0.03,0.2}
+\definecolor{LightGray}{rgb}{0.97,0.97,0.97}
+
+%%% drawing sequence diagrams
+ % \usepackage{tikz}
+ % \usepackage{tikz-uml}
+ % \usepackage{pgf-umlsd}
+ % \usepgflibrary{arrows} % for pgf-umlsd
+ % \usepackage{ifpdf}
+ % \DeclareGraphicsRule{*}{mps}{*}{}
+
+%%% ^^^ CONFLICTS WITH htlatex :-(
+% The following is needed in order to make the code compatible
+% with both latex/dvips and pdflatex.
+% \ifx\pdftexversion\undefined
+%\usepackage[dvips]{graphicx}
+% \else
+%\usepackage[pdftex]{graphicx}
+% \fi
+
+
+
+
+%% http://tex.stackexchange.com/questions/12279/outline-of-style-i-a-i-a-1
+%% adjusted to match https://owl.english.purdue.edu/owl/resource/544/03
+\usepackage{outlines}
+\usepackage{enumitem}
+\setenumerate[1]{label=\Roman*.}
+\setenumerate[2]{label=\Alph*.}
+\setenumerate[3]{label=\arabic*.}
+\setenumerate[4]{label=\alph*.}
+
+% easily link URLs using \url{...}
+% but it will also link in-text citations (-> undesired)
+% \usepackage[]{hyperref}
+% \hypersetup{
+%     backref=false,
+%     colorlinks=true,
+%     citecolor=gray,
+%     linkcolor=gray,
+%     urlcolor=gray,
+% }
+% urgs, now disable links?
+%\usepackage[]{nohyperref}  % This makes hyperref commands do nothing without errors
+\usepackage{url}  % This makes \url work
+% http://tex.stackexchange.com/questions/667/typeset-url-in-a-non-typewriter-font
+\urlstyle{same}
+
+%----------------------------------------------------------------------------------------
+% Source code listings
+% \begin{lstlisting}[language=html] .... \end{lstlisting}
+% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\usepackage{listings}
+\usepackage{textcomp}
+\lstset{
+    backgroundcolor=\color{listingBgColor},
+    tabsize=2,
+    rulecolor=\color[rgb]{0.1,0.1,0.1},
+    numberstyle=\tiny\color{black},
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    keepspaces=true,
+    showstringspaces=false,
+    identifierstyle=\ttfamily,
+    %basicstyle=\scriptsize,
+    %captionpos=b, % caption position; b for bottom; default top
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+% for pseudo code -- https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+% allow manual caption/figure numbering
+% http://tex.stackexchange.com/questions/199207/no-caption-number-for-figures-and-tables
+\usepackage{caption}
+
+% side-by-side pictures
+% http://tex.stackexchange.com/questions/37581/latex-figures-side-by-side
+\usepackage{subcaption}
+
+% hierarchical diagrams using forest
+% http://tex.stackexchange.com/questions/191001/how-to-draw-a-hierarchical-diagram-in-tikz
+% \usepackage{forest}
+% \usetikzlibrary{arrows.meta, shapes.geometric, calc, shadows}
+% \colorlet{mygreen}{green!75!black}
+% \colorlet{col1in}{red!30}
+% \colorlet{col1out}{red!40}
+% \colorlet{col2in}{mygreen!40}
+% \colorlet{col2out}{mygreen!50}
+% \colorlet{col3in}{blue!30}
+% \colorlet{col3out}{blue!40}
+% \colorlet{col4in}{mygreen!20}
+% \colorlet{col4out}{mygreen!30}
+% \colorlet{col5in}{blue!10}
+% \colorlet{col5out}{blue!20}
+% \colorlet{col6in}{blue!20}
+% \colorlet{col6out}{blue!30}
+% \colorlet{col7out}{orange}
+% \colorlet{col7in}{orange!50}
+% \colorlet{col8out}{orange!40}
+% \colorlet{col8in}{orange!20}
+% \colorlet{linecol}{blue!60}
+
+%%% USE CASE DESCRIPTIONS
+%%% http://tex.stackexchange.com/questions/10293/latex-template-for-use-cases
+
+\usepackage{booktabs}
+
+\newcommand\tabularhead[1]{
+\begin{table}[H]
+  \caption{Action <<#1>>}
+  \begin{tabular}{|p{0.4\linewidth}|p{0.55\linewidth}|}
+    \hline
+    \textbf{Action} & \textbf{#1} \\
+    \hline}
+
+  \newcommand\addrow[2]{#1 &#2\\ \hline}
+
+  \newcommand\addmulrow[2]{ \begin{minipage}[t][][t]{2.5cm}#1\end{minipage}%
+     &\begin{minipage}[t][][t]{8cm}
+      \begin{enumerate} #2   \end{enumerate}
+      \end{minipage}\\ }
+
+  \newenvironment{usecase}{\tabularhead}
+{\hline\end{tabular}\end{table}}
+
+
+%%%
+
+
+%----------------------------------------------------------------------------------------
+% tweakable style: header colors, document font (uncomment for Arial-Like)
+
+% colorize headers?
+%\chapterfont{\color{LightGray}}  % sets colour of chapters
+%\sectionfont{\color{DarkRed}}
+%\setkomafont{disposition}{\color{UOLBlue}\bfseries}
+
+% Document Font - UoL Master Thesis requires sans serif
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+
+%----------------------------------------------------------------------------------------
+% Bibliography settings, based on output; also defines \finishDocument command
+% Turn off hyphenation for plaintext output; use bibtex as htlatex doesnt support biber
+
+\ifdefined\isHTML
+  %\documentclass[handout]{beamer}
+    %%% ARGH hlatex produces garbled html output (Swiss Federal Statistical Oce (SFSO), 2015) ) -- Oce???
+    \usepackage[
+        backend=bibtex,  %%% BIBTEX for  -- H T M L -- OUTPUT !!!
+        natbib=true,
+        style=authoryear,
+        sortlocale=en_GB,
+        url=true,
+        maxbibnames=99,
+        firstinits=true,
+        eprint=false
+    ]{biblatex}
+    \addbibresource{../templates/se-studies.bib}
+    \usepackage[none]{hyphenat}  %% No hyphenations
+    \pagenumbering{gobble}  %% No page numbers
+    \newcommand{\finishDocument}{
+        \renewcommand*{\finalandcomma}{} %% do not put comma before final author's "and" / "&"
+        % http://tex.stackexchange.com/questions/1554/biblatex-displaying-all-authors-of-multi-author-works-in-the-bibliography
+        \renewcommand*{\finalnamedelim}{
+          % delimit final name using ampersand
+          \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+            \addspace\&\space
+        }
+        \printbibliography  % FIXME [maxnames=99]
+        \end{document}
+    }
+\else %%%% PDF  OUTPUT  ----- D E F A U L T -----------
+    % avoid nice font in html output, as it breaks chars (see SFSO/01/week2/assignment-ip.tex)
+    \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+    \usepackage[
+        backend=biber,    %%% BIBER
+        style=authoryear,%-ibid,
+        dashed=false, % re-print recurring author names in bibliography
+        citestyle=authoryear,
+        %bibstyle=apalike,
+        sortcites=false,
+        block=space,
+        useprefix=true, % de.. http://tex.stackexchange.com/questions/134258/harvard-style-bibliography-with-biblatex-almost-but-not-quite
+        sortlocale=en_GB,
+        natbib=true,
+        url=true, %%%% FIXME ???? -> FALSE!
+        maxcitenames=3,
+        maxbibnames=99,  % show all authors in bib (not "et al")
+        firstinits=true, % use initials in bibliography
+        uniquename=false, % http://tex.stackexchange.com/questions/65747/citation-style-in-biblatex-1-get-rid-of-first-names-2-remove-comma-before
+        uniquelist=false,
+        doi=true,
+        eprint=false
+    ]{biblatex}
+    \addbibresource{../templates/se-studies.bib}
+    \newcommand{\finishDocument}{
+        \renewcommand*{\finalandcomma}{} %% do not put comma before final author's "and" / "&"
+        % http://tex.stackexchange.com/questions/1554/biblatex-displaying-all-authors-of-multi-author-works-in-the-bibliography
+        \renewcommand*{\finalnamedelim}{
+          % delimit final name using ampersand
+          \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+            \addspace\&\space
+        }
+        \printbibliography
+        \end{document}
+    }
+    % attach files to pdfs -- http://tex.stackexchange.com/questions/94811/attaching-file-into-a-pdf-with-pdflatex-will-crash-adobe-reader
+    \usepackage{attachfile}
+    % avoid centered headers in HTML output, enforce them here for PDF
+    \allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\fi
+
+%----------------------------------------------------------------------------------------
+% tune biber / bibtex citations and references
+
+\usepackage{csquotes} % single quotes for titles in bib; requires british babel
+\usepackage{xpatch}
+\xapptobibmacro{date+extrayear}{\nopunct}{}{} % no . after "author (year)" in bib
+
+% set delimiter between initials of first name
+\renewcommand*{\bibinitdelim}{}
+
+% ensure constant order last, first in bib
+\DeclareNameAlias{sortname}{last-first}
+\DeclareNameAlias{default}{last-first}
+
+% comma as separator in bibliography, not full stop
+% (disabled) \renewcommand*{\newunitpunct}{\addcomma\addspace}
+% increase spacing between entries in bibliography
+\setlength\bibitemsep{1.5\itemsep}
+
+% http://tex.stackexchange.com/questions/76262/biblatex-format-for-online-sources
+\NewBibliographyString{available}
+% Avoid Nov. - have November in URL dates; set "Cited references" as header; "Availabole from:"
+\DefineBibliographyStrings{english}{
+  available = {Available from},
+  references = {Cited References},
+  january = {January},
+  february = {February},
+  march = {March},
+  april = {April},
+  may = {May},
+  june = {June},
+  july = {July},
+  august = {August},
+  september = {September},
+  october = {October},
+  november = {November},
+  december = {December}
+}
+% Place volume number within parentheses:
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+\DeclareFieldFormat[article]{doi}{DOI:~#1}
+% Define format for url => "Available from: ...url..."
+\DeclareFieldFormat{url}{\bibstring{available}\addcolon\space \url{#1}}
+\DeclareFieldFormat{urldate}{#1}
+
+% Use "(Acccessed: 01 December 2000)" for @online refs
+\renewbibmacro*{urldate}{
+  \printtext{(Accessed\addcolon\space\stripzeros{\thefield{urlday}}~\mkbibmonth{\thefield{urlmonth}}~\printfield{urlyear})}}
+% Hack: put , in front of volume+number FIXME
+\renewbibmacro*{volume+number+eid}{
+    , % FIXME HACKCHACHAHCKACHAKC
+    \printfield{volume}
+    \setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+    \printfield{number}
+    \setunit{\addcomma\space}
+    \printfield{eid}
+}
+% FIX DOI - no dot afterwards desired
+% macro taken from standard.bbx, commented out newunits+eprint
+% hackish, but eprint isn't needed and only one of doi or URL required
+\renewbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}
+    {\printfield{doi}}
+    {}%
+  % \newunit\newblock
+  % \iftoggle{bbx:eprint}
+  %   {\usebibmacro{eprint}}
+  %   {}%
+  % \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}
+}
+% FIXME hack , !!!!!! % remove 'in:' preceding article title
+\renewbibmacro{in:}{,}
+
+% set output fields for @online bib type
+% FIXME: Only works for biber/pdf...???
+\DeclareBibliographyDriver{online}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor+others/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  %\usebibmacro{title}%
+  %\newunit
+  \printfield{title}
+  %\space
+  %\iffieldundef{volume}
+   % {}
+    %{\addcomma no. \printfield{volume}}
+  %\iffieldundef{issue}
+  %  {}
+  %  {\addcomma \printfield{issue}}
+  \space
+    \iffieldundef{issue}
+    {\printtext{[Online]}}
+    {\printtext{[Youtube Video, Online]}} %\printfield{note}% [Online]
+  \space
+  \printlist{organization}% HACK HACK ... must be "place: publisher" in .bib
+  \newunit\newblock
+  \usebibmacro{date}%
+  \newunit\newblock
+  \iftoggle{bbx:eprint}
+    {\usebibmacro{eprint}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{url+urldate}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}%
+     \usebibmacro{related}}
+    {}%
+  \usebibmacro{finentry}
+}
+
+% same for article: add [Online] if URL present
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \usebibmacro{in:}%
+  \usebibmacro{journal+issuetitle}%
+  % \newunit
+  % \usebibmacro{byeditor+others}%
+  % \newunit
+  \usebibmacro{note+pages}% name of ejournal collection should follow here
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+    {\printfield{issn}}
+    {}%
+  \iffieldundef{url}        %%%% fix online articles... add [Online] if url present
+    {} % no url, no deal.
+    {\iffieldundef{pages}{,}{}\space[Online]}
+  \iffieldundef{doi}        %%%% fix online articles... add [Online] if url present
+    {} % no url, no deal.
+    {\iffieldundef{pages}{,}{}\space[Online]}
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}%
+     \usebibmacro{related}}
+    {}%
+  \usebibmacro{finentry}}
+
+%----------------------------------------------------------------------------------------
+% tweak headers style and numbering
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+% https://www.sharelatex.com/learn/Typesetting_quotations
+\usepackage{epigraph}
+% \epigraph{All human things are subject to decay, and when fate summons, Monarchs must obey}{\textit{Mac Flecknoe \\ John Dryden}}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+
+% Create horizontal rule command with 1 argument of height
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+% Your university, school and/or department name(s)
+\title{
+    \normalfont \normalsize
+    \textsc{University of Liverpool} \\ [25pt]
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge \assignmentTitle \\ % The assignment title (to be defined per doc)
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+% Mail/Link author?
+\author{Jan Hacker\\
+% \small{\texttt{\href{mailto:jan.hacker@online.liverpool.ac.uk}{jan.hacker@online.liverpool.ac.uk}}}
+}
+
+% Today's date or a custom date
+\date{\normalsize\today}
+% To date back a assignment (re-submission or whatever):
+% \date{Sunday 18\textsuperscript{th} January, 2016}
+
+%----------------------------------------------------------------------------------------
+% Finally, begin document, add title ...
+
+% http://tex.stackexchange.com/questions/311426/bibliography-error-use-of-blxbblverbaddi-doesnt-match-its-definition-ve
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
+% allow multi-line comments using \begin{comment} ... \end{comment}
+\usepackage{verbatim}
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+% LINKS THAT MADE THIS HAPPEN
+
+% look into standard.bbx
+% http://tex.stackexchange.com/questions/176297/automatically-highlight-undefined-references
+% http://tex.stackexchange.com/questions/8351/what-do-makeatletter-and-makeatother-do
+% https://www.ctan.org/pkg/csquotes?lang=en --- consider use?
+% http://tex.stackexchange.com/questions/180986/biblatex-no-period-after-book-and-collection-titles
+% http://www.khirevich.com/latex/biblatex/
+% http://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
+% http://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document
+% http://tex.stackexchange.com/questions/3730/using-harvard-referencing-style
+% http://tex.stackexchange.com/questions/102937/natbib-use-the-harvard-referencing-system
+% http://tex.stackexchange.com/questions/26516/how-to-use-biber
+% http://tex.stackexchange.com/questions/102662/harvard-reference-using-biblatex
+% https://www.sharelatex.com/learn/Biblatex_citation_styles
+% https://www.overleaf.com/latex/examples/a-simple-example-showing-how-to-create-harvard-style-referencing-in-latex/mnwzgkyvdbyy#.Vi6PoeorLdQ
+% https://www.sharelatex.com/learn/Bibtex_bibliography_styles
+% http://tex.stackexchange.com/questions/134258/harvard-style-bibliography-with-biblatex-almost-but-not-quite
+% http://tex.stackexchange.com/questions/2095/simplest-way-to-typeset-entire-document-in-sans-serif-helvetica
+% http://www.tug.dk/FontCatalogue/
