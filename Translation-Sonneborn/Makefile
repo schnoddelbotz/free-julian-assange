@@ -5,6 +5,9 @@ TARGET := brochure_en.pdf
 all: $(TARGET)
 
 $(TARGET): brochure_en.tex
+	# write current git hash to .tex file \include{}'d by brochure_en.tex title pages
+	git rev-parse --short HEAD > githash
+	date > buildstamp
 	#pandoc brochure_en.md -o $(TARGET) --from markdown --template eisvogel.tex --listings
 	pdflatex brochure_en
 	# ja, don't ask. we run twice to get the TOC right. Table of contents.

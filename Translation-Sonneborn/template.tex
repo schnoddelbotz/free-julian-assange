@@ -19,8 +19,6 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{pagecolor}
 \definecolor{assangered}{rgb}{0.6, 0.145, 0.196}
-\chapterfont{\color{assangered}}  % sets colour of chapters
-\sectionfont{\color{assangered}}
 
 
 % https://groups.google.com/g/comp.text.tex/c/mq_OLlvzmoU
@@ -78,3 +76,15 @@
 % allow multi-line comments using \begin{comment} ... \end{comment}
 \usepackage{verbatim}
 
+
+% https://tex.stackexchange.com/questions/120740/how-do-i-remove-chapter-n-from-the-chapter-titles-of-a-book
+% https://tex.stackexchange.com/questions/351540/having-chapters-shown-as-numbers-and-roman-letters
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\Roman{section}}
+\addtolength{\cftsecnumwidth}{10pt}
+\addtolength{\cftchapnumwidth}{10pt}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\color{assangered} \Large \thechapter. \ }
+\titleformat{\section}[display]{\normalfont\bfseries}{}{0pt}{\color{assangered} \large \thechapter. \ }
