@@ -10,6 +10,17 @@ Translations and other support for https://twitter.com/StellaMoris1 and https://
 
 https://en.wikipedia.org/wiki/Julian_Assange
 
+## Second - Tell me more about Assange!
+
+AI or the human editing this file has duplicated partial sentences in 
+the translation available here, but it still is one of THE sources out there!
+
+The special AI-German tone makes this even more fun to read!
+
+Download the [Drucksache 1 - Julian Assange (AI english PDF)](./Translation-Sonneborn/brochure_en.pdf) 
+OR read the more accessible and thus also more SEO friendly ONLINE HTML version:
+[Circular 1 - Assange (AI English tex2markdown markdown2html)](./Translation-Sonneborn/circular_1-Assange.md)
+
 # Broschüre - Brochure - Translation
 
 Input: Potentially unlicesend #Adobe #Indesdign #INDD document #FreeAssange #FreeAssange https://martinsonneborn.de/wp-content/uploads/2021/12/Broschuere-Assange-Web_Auflage-2.pdf 
