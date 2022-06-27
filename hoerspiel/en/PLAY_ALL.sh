@@ -14,6 +14,9 @@ say() {
 	done
 }
 
+# todo
+# random_voice($lang) -> that.
+
 for script in ./??_*.sh; do
 	source $script 
 done
