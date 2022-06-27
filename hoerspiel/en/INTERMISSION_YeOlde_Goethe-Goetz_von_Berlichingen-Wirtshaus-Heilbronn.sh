@@ -16,7 +16,7 @@ Elisabeth=Anna
 Gerichtsdiener=Yannick  # Jan, icke - ich - Yannick?! #WTF #Konstanz, nicht BERLIN, ja?!
 
 
-say -v $NARRATOR "Johann Wolfgang Goethe. --- Götz von Berlichingen mit der eisernen Hand."
+say -v $NARRATOR "Johann Wolfgang Goethe. Götz von Berlichingen mit der eisernen Hand."
 
 sleep 0.5
 
