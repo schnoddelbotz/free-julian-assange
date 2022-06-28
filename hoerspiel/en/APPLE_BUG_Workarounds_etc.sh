@@ -1,5 +1,7 @@
 # Not executable. To be sourced by other scripts in here.
 
+test -z $VOICE && VOICE=Daniel
+
 say() {
 	retval=1
 	while [ $retval != 0 ]; do
@@ -7,7 +9,7 @@ say() {
 		retval=$?
 		if [ $retval -ne 0 ]; then
 			echo "Failed, will retry forever!"
-			sleep 1
+			sleep 0.5
 		fi
 	done
 }

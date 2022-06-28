@@ -1,7 +1,5 @@
 #!/bin/sh -x
 
-test -z $VOICE && VOICE=Daniel
-
 # This is sourced again by individual scripts.
 # Feels redundant (thanks, Tim Cook), but enables STABLE stand-alone execution.
 source APPLE_BUG_Workarounds_etc.sh
