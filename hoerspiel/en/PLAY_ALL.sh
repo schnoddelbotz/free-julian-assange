@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-test -z $VOICE && VOICE=fred
+test -z $VOICE && VOICE=Daniel
 
 say() {
 	retval=1
