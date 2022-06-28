@@ -13,3 +13,19 @@ say() {
 		fi
 	done
 }
+
+# DOCS :)
+
+# DE voices: 
+#  Anna Petra
+#  Markus Yannick
+#
+# EN voices: 
+#  Alex Daniel Fred Rishi Oliver Tom 
+#  Ava Karen Kate Moira Princess Samantha Serena Tessa Veena Victoria
+#
+# IT voices:
+#  Luca
+#  Alice 
+#
+# FR voices
