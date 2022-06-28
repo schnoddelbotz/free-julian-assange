@@ -2,17 +2,9 @@
 
 test -z $VOICE && VOICE=Daniel
 
-say() {
-	retval=1
-	while [ $retval != 0 ]; do
-		/usr/bin/say $@
-		retval=$?
-		if [ $retval -ne 0 ]; then
-			echo "Failed, will retry forever!"
-			sleep 1
-		fi
-	done
-}
+# This is sourced again by individual scripts.
+# Feels redundant (thanks, Tim Cook), but enables STABLE stand-alone execution.
+source APPLE_BUG_Workarounds_etc.sh
 
 # todo
 # random_voice($lang) -> that.
