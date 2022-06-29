@@ -45,7 +45,7 @@ sleep 3
 say -r 190 -v $JOHN -f 18_2-Presidents-of-the-USA_b.txt
 say -v $JOHN "Thanks for your attention kids, that was the second part of three of chapter 18."
 say -v $SIE "Was treibst Du denn hier, Johnny?"
-say -v $WIF "I just wanted to ask the same thing"
+say -v $WIFE "I just wanted to ask the same thing"
 say -v $JOHN "$VOICE, could you take over the third half?"
 say -v $VOICE "My name is Daniel. True. I'll do! Okay! 200 words per minute or so. Listen!"
 
