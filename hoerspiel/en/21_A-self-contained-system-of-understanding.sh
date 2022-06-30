@@ -19,7 +19,7 @@ say -v $SIE "Burt, was meinst Du damit?"
 say -v $BURT "Ach, nothing."
 say -v $SIE "Wollen wir?"
 say -v $BURT "Exactly. Excellent. Let's go, kids!"
-say -a Anna "Das war die mit Abstand beschissenste Intro seit langem."
+say -v Anna "Das war die mit Abstand beschissenste Intro seit langem."
 say -v $BURT "Fuck off, Anna!"
 sleep 2
 
