@@ -35,8 +35,8 @@ say -v $FRAU "I want my money back"
 say -v $SIE "Ich will mein Geld auch zurück. Frechheit."
 say -v Serena "Yes, that was totally unstatisfying"
 sleep 1
-say -v $MARKUS "Okay, in diesem Fall führen wir in Deutschland jetzt die Sammelklage ein."
+say -v Markus "Okay, in diesem Fall führen wir in Deutschland jetzt die Sammelklage ein."
 sleep 1
-say -v $MARKUS "Als erstes nutzen wir sie gegen die Stromkonzerne, wegen der Umweltverschmutzung. Dann gegen die EU, wegen der Abholzung des Regenwaldes. Dann gegen die EU, wegen des nach Italien verschipperten Mülls. Aber zuvor: Julian Assange. Raus aus dem Knast. Jetzt!"
+say -v Markus "Als erstes nutzen wir sie gegen die Stromkonzerne, wegen der Umweltverschmutzung. Dann gegen die EU, wegen der Abholzung des Regenwaldes. Dann gegen die EU, wegen des nach Italien verschipperten Mülls. Aber zuvor: Julian Assange. Raus aus dem Knast. Jetzt!"
 sleep 1
-say -v $MARKUS "Auf Bald, meine Lieben! Friede."
+say -v Markus "Auf Bald, meine Lieben! Friede."
