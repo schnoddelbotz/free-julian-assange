@@ -12,11 +12,16 @@ This page hosts the **AUDIOBOOK** only, and some **TECHNO** from *TranceNation*.
 
 ![This is JULIAN ASSANGE](/Translation-Sonneborn/Assange_from_Wikipedia.jpg)
 
-https://en.wikipedia.org/wiki/Julian_Assange
+[https://en.wikipedia.org/wiki/Julian_Assange](https://en.wikipedia.org/wiki/Julian_Assange)
 
-## Second 1 - Free Gratis Audiobook and Techno 
+# Second: Broschüre - Brochure - Drucksache - Translation
 
-### Drucksache1 - The free audiobook - Watch on YouTube.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/chDDhwsynVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Input: Potentially unlicesend #Adobe #Indesdign #INDD document #FreeAssange #FreeAssange 
+[https://martinsonneborn.de/wp-content/uploads/2021/12/Broschuere-Assange-Web_Auflage-2.pdf](https://www.linuxuprising.com/2019/05/how-to-convert-pdf-to-text-on-linux-gui.html)
+
+# Third: First Drucksache1 Free audiobook - Watch on YouTube ?!
 
 Yes, an audiobook, but also something to watch! Awesome, no? #NEW #HITECH Assange education technique.
 Listen to speech synthesis. State of the art apple technology. English language. And German, French and Italian intermissions.
@@ -39,27 +44,10 @@ The special AI-German tone makes this even more fun to read!
 OR read the more accessible and thus also more SEO friendly ONLINE HTML version:
 **[Circular 1 - Assange (AI English tex2markdown markdown2html)](./Translation-Sonneborn/circular_1-Assange.md)**
 
-# Broschüre - Brochure - Translation
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/chDDhwsynVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Input: Potentially unlicesend #Adobe #Indesdign #INDD document #FreeAssange #FreeAssange https://martinsonneborn.de/wp-content/uploads/2021/12/Broschuere-Assange-Web_Auflage-2.pdf 
-Todo (#macOS #HomeBrew here)
-```bash
-brew install pandoc poppler 
-```
-
-We simply assume you have Apple Developer Command Line Tools installed.
-If not, you will be prompted. Now, this is a useless comment!
-
-We shamelessly copied the current wonderful #OpenSource [Eisvogel.tex](https://github.com/Wandmalfarbe/pandoc-latex-template) #Latex #Template
-for the purpose of producing even more appealing print output.
-
 # WIP
 
 > WE ARE ON IT.
 
 BRB.
 
-Hints (merci!): https://www.linuxuprising.com/2019/05/how-to-convert-pdf-to-text-on-linux-gui.html
+Hints (merci!): [https://www.linuxuprising.com/2019/05/how-to-convert-pdf-to-text-on-linux-gui.html](https://www.linuxuprising.com/2019/05/how-to-convert-pdf-to-text-on-linux-gui.html)
