@@ -88,6 +88,14 @@ https://montypython.com/#FreeAssange
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9sW5ww9u_KI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# True Peace
+
+Listen the whole song. Travel report. Jamica. Love. Peace. Friendship.
+By Hans Söllner, titled: Der Charlie.
+The most important part: Das kleine Lied vom Frieden. Mitsingen ist Pflicht!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nt56sWqCRMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## AD
 
 Advertisement Buy #ELGATO #StreamDeck to play them easily, see e.g.
