@@ -78,6 +78,22 @@ https://montypython.com/#FreeAssange
  - [MP-WE_VE_DONE_ALL.mp3](./MP-WE_VE_DONE_ALL.mp3)
  - [MP-We_ve_Done_The_Passion_Fruit.mp3](./MP-We_ve_Done_The_Passion_Fruit.mp3)
 
+ - [Kiesewetter-Long-Keiner-Hat-Mich-lieb.mp3](./Kiesewetter-Long-Keiner-Hat-Mich-lieb.mp3)
+ - [BananaJoe-Oh-Banana-Joe.mp3](./BananaJoe-Oh-Banana-Joe.mp3)
+ - [Banan-Joe-Long.mp3](./Banan-Joe-Long.mp3)
+ - [Banana-Joe-End.mp3](./Banana-Joe-End.mp3)
+ - [Kiesewetter-Keiner-Hat-Mich-Richtig-Lieb.mp3](./Kiesewetter-Keiner-Hat-Mich-Richtig-Lieb.mp3)
+ - [Chaplin-Dictator-hate-intro-long.mp3](./Chaplin-Dictator-hate-intro-long.mp3)
+ - [Chaplin-Dictator-You-dont-hate-only-the-unloved-hate.mp3](./Chaplin-Dictator-You-dont-hate-only-the-unloved-hate.mp3)
+ - [Chaplin-Dictator-Radio-Goodness.mp3](./Chaplin-Dictator-Radio-Goodness.mp3)
+ - [Chaplin-Dictator-Cleverness-Kindness.mp3](./Chaplin-Dictator-Cleverness-Kindness.mp3)
+ - [Chaplin-Dictator-Greed.mp3](./Chaplin-Dictator-Greed.mp3)
+ - [Chaplin-Dictator-Way-Of-Life-Lost.mp3](./Chaplin-Dictator-Way-Of-Life-Lost.mp3)
+ - [Chaplin-Dictator-We-want-to-help.mp3](./Chaplin-Dictator-We-want-to-help.mp3)
+ - [Chaplin-Dictator-Ruling-Helping.mp3](./Chaplin-Dictator-Ruling-Helping.mp3)
+ - [Chaplin-Dictator-Emporer-Not-My-Business.mp3](./Chaplin-Dictator-Emporer-Not-My-Business.mp3)
+
+
 # Outcome
 
 > Zeroday DayO Day0 A pr0 Pro net #FreeAssange KungFu #FreeSpeech Banana Attack Python Crap Sehenswert
@@ -100,4 +116,3 @@ The most important part: Das kleine Lied vom Frieden. Mitsingen ist Pflicht!
 
 Advertisement Buy #ELGATO #StreamDeck to play them easily, see e.g.
  [https://www.digitec.ch/de/s1/product/elgato-stream-deck-pc-mac-game-recorder-6308394?isSecondHand=true&shid=783061&gclid=Cj0KCQjw0JiXBhCFARIsAOSAKqDctZAGoRmAmZuZ9uz_eUySOT1nbPa0ADvUW_alFUfFAT3LvZE0P9EaAsWQEALw_wcB&gclsrc=aw.ds](https://www.digitec.ch/de/s1/product/elgato-stream-deck-pc-mac-game-recorder-6308394?isSecondHand=true&shid=783061&gclid=Cj0KCQjw0JiXBhCFARIsAOSAKqDctZAGoRmAmZuZ9uz_eUySOT1nbPa0ADvUW_alFUfFAT3LvZE0P9EaAsWQEALw_wcB&gclsrc=aw.ds)
-
